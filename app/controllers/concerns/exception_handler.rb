@@ -14,7 +14,5 @@ module ExceptionHandler
     rescue_from ActionController::ParameterMissing do |e|
       render_response_error(e.message, :bad_request)
     end
-    
   end
-
 end

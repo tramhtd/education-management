@@ -9,9 +9,12 @@ class User < ApplicationRecord
     presence: true,
     length: {maximum:100}
 
+  validates :gender,
+  inclusion: {in: [true, false]}
+
   validates :username,
     presence: true,
-    length: {maximum:50}
+    length: {maximum:50},
     uniqueness: { case_sensitive: false }
 
   validates :password,

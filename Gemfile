@@ -10,6 +10,10 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 
+gem 'rufo'
+
+gem 'bcrypt', '~> 3.1.7'
+
 gem 'active_model_serializers', '~> 0.10.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
