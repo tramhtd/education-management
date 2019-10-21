@@ -3,30 +3,29 @@ class User < ApplicationRecord
 
   validates :name,
     presence: true,
-    length: {maximum:50}
+    length: { maximum: 50 }
 
   validates :address,
     presence: true,
-    length: {maximum:100}
+    length: { maximum: 100 }
 
   validates :gender,
-  inclusion: {in: [true, false]}
+    inclusion: { in: [true, false] }
 
   validates :username,
     presence: true,
-    length: {maximum:50},
+    length: { maximum: 50 },
     uniqueness: { case_sensitive: false }
 
   validates :password,
     presence: true,
     confirmation: true,
-    length: { within: 6..50 }, 
+    length: { within: 6..50 },
     on: :create
 
   validates :password,
     confirmation: true,
-    length: { within: 6..50 }, 
+    length: { within: 6..50 },
     allow_blank: true,
     on: :update
-
 end
